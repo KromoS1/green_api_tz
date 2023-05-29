@@ -1,5 +1,5 @@
 import { ChangeEvent, memo, useContext, useState, KeyboardEvent } from "react";
-import { MyDispatchContext, setCurrentChatID } from "../../provider";
+import { MyDispatchContext, addChat, setCurrentChatID } from "../../provider";
 import styles from './styles.module.css'
 
 export const SelectChat = memo(() => {
@@ -12,20 +12,23 @@ export const SelectChat = memo(() => {
 
   const enter = (e: KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
-      dispatch?.(setCurrentChatID(value));
+      dispatch?.(addChat(value));
       setValue('')
     }
   };
 
   return (
-    <div>
-      <input
-        type="text"
-        value={value}
-        placeholder="Введите номер пользователя"
-        onChange={change}
-        onKeyDown={enter}
-      />
+    <div className={styles.container_select_chat}>
+      <div className={styles.box_select_chat}>
+        <input
+          type="text"
+          value={value}
+          placeholder="Введите номер пользователя"
+          onChange={change}
+          onKeyDown={enter}
+          className={styles.input}
+        />
+      </div>
     </div>
   );
 });

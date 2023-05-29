@@ -1,0 +1,78 @@
+.container_data{
+	padding-right: 15px;
+	border-top: 1px solid var(--border-list);
+	display: flex;
+	flex-basis: auto;
+	flex-direction: column;
+	flex-grow: 1;
+	justify-content: center;
+	min-width: 0;
+}
+
+.data_user{
+	text-align: left;
+	display: flex;
+	align-items: center;
+	line-height: normal;
+}
+
+.data_phone{
+	text-align: left;
+	display: flex;
+	flex-grow: 1;
+	overflow: hidden;
+	font-size: 17px;
+	font-weight: 400;
+	line-height: 21px;
+	color: var(--primary-strong);
+	overflow-wrap: break-word;
+}
+
+.text{
+	visibility: visible;
+	overflow-y: hidden;
+	overflow-x: hidden;
+	position: relative;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	display: inline-block;
+	flex-grow: 1;
+}
+
+.data_time{
+	overflow: hidden;
+	line-height: 14px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	flex: none;
+	max-width: 100%;
+	font-size: 12px;
+	line-height: 20px;
+	color: var(--chat-meta);
+}
+
+.time{
+	text-transform: capitalize;
+}
+
+.data_message{
+	margin-top: 2px;
+	display: flex;
+	align-items: center;
+	min-height: 20px;
+	font-size: 13px;
+	line-height: 20px;
+	color: var(--secondary);	
+}
+
+.message{
+	text-align: left;
+	background-color: initial;
+	flex-grow: 1;
+	overflow: hidden;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}

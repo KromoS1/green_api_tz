@@ -3,7 +3,7 @@ export type AppStateType = {
   apiTokenInstance: string | null;
   currentChatId: string
   allMyChat: {
-    [key: number]: string;
+    [key: string]: string;
   };
   messages: {
     [chatId: string]: MessageType[];

@@ -6,4 +6,5 @@ export const setDataGreenApi = (payload: {	idInstance: string | null, apiTokenIn
 } as const)
 
 export const setMessage = (message: MessageType) => ({type: ActionsType.setMessage, payload: message} as const)
-export const setCurrentChatID = (chatID: string) => ({type: ActionsType.setCurrentChatId, payload: `${chatID}@c.us`} as const)
+export const setCurrentChatID = (chatID: string) => ({type: ActionsType.setCurrentChatId, payload: chatID} as const)
+export const addChat = (chatID: string) => ({ type: ActionsType.addChat, payload: chatID } as const)
