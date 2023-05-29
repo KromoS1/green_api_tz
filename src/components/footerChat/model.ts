@@ -14,7 +14,7 @@ export const useSendMessage = () => {
 		const messageObj: MessageType = {
 			type: 'you',
 			text: message,
-			timestamp: Date.now()
+			timestamp: Date.now() / 1000
 		}
 		dispatch?.(setMessage(messageObj));
 	})

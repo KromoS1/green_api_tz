@@ -10,7 +10,7 @@ type PropsType = {
 
 export const DataDialog:FC<PropsType> = memo((props) => {
 
-	const {date, time} = transformTimestamp(props.time)
+	const {date, time} = transformTimestamp(props.time * 1000)
 
 	return (
     <div className={styles.container_data}>
@@ -20,7 +20,7 @@ export const DataDialog:FC<PropsType> = memo((props) => {
         </div>
         <div className={styles.data_time}>
           <span className={styles.time}>
-            {time} {date}
+            {props.lastMessage ? <>{time} {date}</> : <></>}
           </span>
         </div>
       </div>

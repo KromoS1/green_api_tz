@@ -13,7 +13,7 @@ export const ShowMessage = memo(() => {
 
 	const messages = state?.messages[state.currentChatId]?.map((message) => {
 
-		const time = new Intl.DateTimeFormat('ru-RU', {hour:'numeric', minute: 'numeric'}).format(message.timestamp)
+		const time = new Intl.DateTimeFormat('ru-RU', {hour:'numeric', minute: 'numeric'}).format(message.timestamp * 1000)
 
 		return (
       <>
