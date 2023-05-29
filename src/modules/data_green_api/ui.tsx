@@ -20,6 +20,8 @@ export const DataGreenApiForm = memo(() => {
 
   const save = () => {
     dispatch?.(setDataGreenApi({ idInstance: id, apiTokenInstance: apiToken }));
+    localStorage.setItem("idInstance", id);
+    localStorage.setItem("apiTokenInstance", apiToken);
   }
 
 	return (
