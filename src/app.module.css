@@ -1,0 +1,35 @@
+.main_style{
+	position: relative;
+	top: 0;
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	background-color: var(--panel-background-lighter);
+	background-repeat: repeat-x;
+	border-radius: 0;
+	transform-origin: center;
+	left: 0;
+	background-position: 0 0;
+}
+
+@media screen and (min-width: 1441px) {
+  .main_style{
+		margin: 0 auto;
+    box-shadow: 0 6px 18px rgba(var(--shadow-rgb),.05);
+		top: 19px;
+    width: calc(100% - 38px);
+    max-width: 1600px;
+    height: calc(100% - 38px);
+	}
+	.main_style:after{
+		left: 0;
+		position: fixed;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 127px;
+    content: "";
+		background-color: var(--app-background-stripe);
+	}
+}

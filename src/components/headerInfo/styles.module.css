@@ -1,0 +1,24 @@
+.header_info{
+	padding-left: 16px;
+	padding-right: 16px;
+	padding-bottom: 10px;
+	display: flex;
+	width: 100%;
+	justify-content: flex-end;
+	align-items: center;
+	position: relative;
+	background-color: var(--panel-header-background);
+	z-index: 1000;
+	padding-top: 10px;
+	height: var(--h-pane-header);
+	box-sizing: border-box;
+}
+
+.avatar_container{
+	flex-grow: 1;
+}
+
+.icon_container{ 
+	flex: none;
+	color: var(--panel-header-icon);
+}

@@ -1,7 +1,6 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect } from 'react';
 import { AppStateType, MessageType, MyContext, MyDispatchContext, setMessage } from '../../provider';
 import { instance } from '../../api/base';
-import { AxiosResponse } from 'axios';
 import { DeleteNotifyType, ReceiveNotifyType } from './types';
 
 const useCreateApiReceiveNotification = (state: AppStateType | null) => {

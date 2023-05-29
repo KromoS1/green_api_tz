@@ -1,0 +1,26 @@
+.info_icons{
+	color: var(--panel-header-icon);
+	display: flex;
+	align-items: center;
+}
+
+.icons_rows{
+	display: flex;
+	align-items: center;
+}
+
+.icon_box{ 
+	margin-left: 10px;
+	border-radius: 50%;
+	position: relative;
+	flex: none;
+	height: 100%;
+	transition: background-color .3s ease;
+}
+
+.icon_padding{
+	padding: 8px;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}

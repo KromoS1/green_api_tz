@@ -1,5 +1,6 @@
 import { ChangeEvent, memo, useContext, useState, KeyboardEvent } from "react";
 import { MyDispatchContext, setCurrentChatID } from "../../provider";
+import styles from './styles.module.css'
 
 export const SelectChat = memo(() => {
   const [value, setValue] = useState<string>("");
