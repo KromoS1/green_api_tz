@@ -9,6 +9,7 @@ body {
   font-feature-settings: "kern";
   background-color: var(--app-background);
   background-image: linear-gradient(180deg,var(--app-background),var(--app-background-deeper));
+  height: 100vh;
 }
 
 *, :after, :before {

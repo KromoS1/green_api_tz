@@ -1,5 +1,4 @@
-export * from './sendMessage'
-export * from './message'
+export * from './messageChat'
 export * from './selectChat'
 export * from './headerInfo'
 export * from './listDialogs'

@@ -1,18 +1,20 @@
-.container_chat{
-	position: relative;
-	z-index: 100;
-	height: 100%;
-	overflow: hidden;
-	flex-grow: 1;
-	transform: translateZ(0);
-	transform-origin: left top;
+.container_chat {
+  position: relative;
+  z-index: 100;
+  height: 100%;
+  overflow: hidden;
+  flex-grow: 1;
+  transform: translateZ(0);
+  transform-origin: left top;
+  display: flex;
+	flex-direction: column;
 }
 
-.box_element_chat{
-	transform-origin: left top;
-	background-color: var(--conversation-panel-background);
-	display: flex;
-	flex-direction: column;
-	height: 100%;
-	transition: background-color .3s ease;
-}		
+.box_element_chat {
+  transform-origin: left top;
+  background-color: var(--conversation-panel-background);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: background-color 0.3s ease;
+}
