@@ -1,7 +1,8 @@
 import { memo, useContext } from 'react';
 import styles from './styles.module.css'
-import { MessageType, MyContext, MyDispatchContext, setCurrentChatID } from '../../../provider';
+import { MyContext, MyDispatchContext, setCurrentChatID } from '../../../provider';
 import { Dialog } from './dialog';
+import { getDataDialog } from '../lib';
 
 export const ListDialogs = memo(() => {
 
@@ -10,14 +11,9 @@ export const ListDialogs = memo(() => {
 
 	const dialogsKeys = state ? Object.keys(state.allMyChat) : []
 
-	const dialogsList = dialogsKeys.map((key, i) => {
+	const dialogsList = dialogsKeys.map((key) => {
 
-		const idChat = state?.allMyChat[key];
-		const messageList = state?.messages[idChat as string] as MessageType[];
-		const lastMessage = messageList[messageList.length - 1] 
-
-		const lastText = lastMessage?.text ?? '';
-		const lastTimestamp = lastMessage?.timestamp ?? Date.now()
+		const {idChat, lastText, lastTimestamp} = getDataDialog(state, key);
 
 		const selectChat = () => {
 			dispatch?.(setCurrentChatID(idChat as string));
@@ -25,6 +21,7 @@ export const ListDialogs = memo(() => {
 
 		return (
       <Dialog
+        isSelect={state?.allMyChat[key] === state?.currentChatId}
         phone={key}
         callback={selectChat}
         lastMessage={lastText}

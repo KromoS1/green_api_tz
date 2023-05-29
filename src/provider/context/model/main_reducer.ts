@@ -20,11 +20,10 @@ export const mainReducer = (state = mainState, action: ActionTypes) => {
 
 		case ActionsType.setCurrentChatId: {
 
-			return { ...state, currentId: action.payload }
+			return { ...state, currentChatId: action.payload }
 		}
 
 		case ActionsType.setMessage: {
-			debugger
 
 			return {...state, messages: {...state.messages, [state.currentChatId]: [...state.messages[state.currentChatId], action.payload]}}
 		}

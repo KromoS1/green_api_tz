@@ -1,5 +1,5 @@
 import { ChangeEvent, KeyboardEvent, memo, useState } from 'react';
-import { useSendMessage } from './model';
+import { useSendMessage } from '../footerChat/model';
 
 export const SendMessage = memo(() => {
 

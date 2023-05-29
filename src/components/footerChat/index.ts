@@ -1,0 +1,1 @@
+export {FooterChat} from './ui'

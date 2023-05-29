@@ -7,3 +7,12 @@
 	transform: translateZ(0);
 	transform-origin: left top;
 }
+
+.box_element_chat{
+	transform-origin: left top;
+	background-color: var(--conversation-panel-background);
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	transition: background-color .3s ease;
+}		

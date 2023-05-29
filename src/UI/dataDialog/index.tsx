@@ -1,5 +1,6 @@
 import { FC, memo } from 'react';
 import styles from './styles.module.css'
+import { transformTimestamp } from './lib';
 
 type PropsType = {
 	lastMessage: string
@@ -9,16 +10,7 @@ type PropsType = {
 
 export const DataDialog:FC<PropsType> = memo((props) => {
 
-	const date = new Intl.DateTimeFormat("ru-Ru", {
-    day: "numeric",
-    month: "numeric",
-		year:'numeric'
-  }).format(props.time * 1000);
-
-	const time = new Intl.DateTimeFormat("ru-Ru", {
-    hour: "numeric",
-    minute: "numeric",
-  }).format(props.time * 1000);
+	const {date, time} = transformTimestamp(props.time)
 
 	return (
     <div className={styles.container_data}>

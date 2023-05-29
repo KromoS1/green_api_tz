@@ -5,18 +5,22 @@ import { AvatarMini, DataDialog } from '../../../UI';
 type PropsType = {
   phone: string;
   lastMessage: string;
-  time: number
+  time: number;
+  isSelect: boolean
   callback: () => void;
 };
 
 export const Dialog: FC<PropsType> = memo((props) => {
+
+  const styleIsActive = `${styles.dialog_box_elements} ${props.isSelect ? styles.dialog_active : ''}`;
+
   return (
     <div className={styles.container_dialog}>
       <div className={styles.dialog}>
-        <div className={styles.dialog_box_elements}>
+        <div className={styleIsActive} onClick={props.callback}>
           <div className={styles.container_avatar}>
             <div className={styles.avatar}>
-              <AvatarMini callback={() => {}} />
+              <AvatarMini />
             </div>
           </div>
           <DataDialog

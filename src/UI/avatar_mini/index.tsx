@@ -2,7 +2,7 @@ import { FC, memo } from 'react';
 import styles from './styles.module.css'
 
 type PropsType = {
-	callback: () => void
+	callback?: () => void
 }
 
 export const AvatarMini: FC<PropsType> = memo(() => {

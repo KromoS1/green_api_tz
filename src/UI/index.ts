@@ -1,3 +1,5 @@
 export { AvatarMini } from './avatar_mini'
 export { InfoIcons } from './info_icons'
 export { DataDialog } from './dataDialog'
+export { IconsChatFooter } from './icons_chat_footer'
+export { CustomInput } from './input'
