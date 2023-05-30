@@ -4,7 +4,7 @@ import './index.css'
 import { ContextProvider } from './provider';
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-    <ContextProvider>
-      <App />
-    </ContextProvider>
+  <ContextProvider>
+    <App />
+  </ContextProvider>
 );

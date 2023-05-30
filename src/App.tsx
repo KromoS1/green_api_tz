@@ -8,6 +8,7 @@ export const App:FC = () => {
   const dispatch = useContext(MyDispatchContext)
 
   useEffect(() => {
+    
     const EscKeyDown = (e: KeyboardEvent) => {
       if(e.key === 'Escape') {
         dispatch?.(setCurrentChatID(''))

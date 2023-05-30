@@ -16,7 +16,6 @@ export const MainPage = memo(() => {
   useEffect(() => {
     
     setTimeout(() => setViewModal(!!data?.idInstance),500)
-
   }, [data?.idInstance]);
 
   useEffect(() => {
