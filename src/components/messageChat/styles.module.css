@@ -8,7 +8,7 @@
 .box_list{
 	left: 0;
 	border-left: 1px solid var(--conversation-panel-border);
-	background-color: initial;
+	background-color: #efeae2;
 	position: absolute;
 	top: 0;
 	z-index: 100;
@@ -18,8 +18,20 @@
 	width: 100%;
 	height: 100%;
 	overflow-x: hidden;
-	overflow-y: scroll;
+	overflow-y: auto;
 	transition: background .3s ease-out .1s;
+}
+
+.box_list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.box_list::-webkit-scrollbar-track {
+  background-color: darkgrey;
+}
+
+.box_list::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
 }
 
 .list{

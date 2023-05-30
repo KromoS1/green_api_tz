@@ -5,7 +5,7 @@ type PropsType = {
   placeholder: string;
   value: string;
   callback: (e: ChangeEvent<HTMLInputElement>) => void;
-  callbackEnter: (e: KeyboardEvent<HTMLInputElement>) => void;
+  callbackEnter?: (e: KeyboardEvent<HTMLInputElement>) => void;
 };
 
 export const CustomInput: FC<PropsType> = memo(
