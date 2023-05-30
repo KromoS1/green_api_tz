@@ -1,6 +1,6 @@
 {
   "name": "tz_whats_app",
-  "private": true,
+  "private": false,
   "version": "1.0.0",
   "type": "module",
   "scripts": {

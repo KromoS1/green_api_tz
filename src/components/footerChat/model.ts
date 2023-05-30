@@ -9,7 +9,7 @@ export const useSendMessage = () => {
 	return (message: string) => instance.post(`/waInstance${data?.idInstance}/sendMessage/${data?.apiTokenInstance}`,{
 		chatId: data?.currentChatId,
 		message
-	}).then(res => {
+	}).then(() => {
 
 		const messageObj: MessageType = {
 			type: 'you',
